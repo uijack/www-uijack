@@ -30,9 +30,6 @@
     "http-server": "^0.6.1"
   },
   "scripts": {
-    "postinstall": "bower install",
-
-    "prestart": "npm install",
-    "start": "http-server -a 0.0.0.0 -p 8000"
+    "start": "cd assets/ && http-server -a 0.0.0.0 -p 8000"
   }
 }

@@ -5,21 +5,21 @@ angular.module('uijack')
         $urlRouterProvider.when('', '/index');
 
         $stateProvider
-            .state('index', {
-                url: '/index',
+            .state('home', {
+                url: '',
                 templateUrl: 'templates/navigate.tpl.html',
                 controller: 'IndexCtrl'
             })
-            .state('index.page1', {
-                url: '/page1',
+            .state('home.index', {
+                url: '/index',
                 templateUrl: 'templates/page1.tpl.html'
             })
-            .state('index.page2', {
-                url: '/page1',
+            .state('home.index2', {
+                url: '/index2',
                 templateUrl: 'templates/page2.tpl.html'
             })
-            .state('index.page3', {
-                url: '/page1',
+            .state('home.index3', {
+                url: '/index3',
                 templateUrl: 'templates/page3.tpl.html'
             })
         ;

@@ -1,7 +1,16 @@
 @charset "UTF-8";
 
 // include all of uijack
-
+// Core variables and mixins
 @import 'variables';
-@import 'util';
+@import '_mixins';
+
+// Reset and dependencies
+@import 'normalize';
+//@import "glyphicons.less"; //艺术字
+
+// Core CSS
+@import 'scaffolding';
+
+// Components
 @import 'navigate';
