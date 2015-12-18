@@ -10,11 +10,9 @@
     "html5",
     "css3",
     "angularjs",
-    "bootstrao",
+    "bootstrao"
   ],
   "description": "the website for me",
-  "main": "jquery.js",
-  "moduleType": [],
   "keywords": [
     "uijack"
   ],
