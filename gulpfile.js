@@ -63,7 +63,7 @@ var config = {
 // register task
 
 gulp.task('clean', function(done) {
-        return del(config.clean.src, done);
+    return del(config.clean.src, done);
 });
 
 // gulp.task('libjs', function() {
@@ -96,15 +96,16 @@ gulp.task('clean', function(done) {
 //     .pipe(gulp.dest(config.defaultindex.dest));
 // });
 
-gulp.task('sass:watch',function (){
-    gulp.watch('scss/*.scss',['sass:compile']);
-});
 
 gulp.task('sass:compile', function(done) {
   return gulp.src(config.sass.src)
-    .pipe(sass())
+    .pipe(sass({outputStyle: 'expanded'}))
     .on('error', sass.logError)
     .pipe(gulp.dest(config.sass.dest));
+});
+
+gulp.task('sass:watch',function (){
+    gulp.watch('assets/scss/*.scss', ['sass:compile']);
 });
 
 gulp.task('default', function(  done ) {
