@@ -1,0 +1,134 @@
+@mixin bg2-ul-li() {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  left: 50%;
+  top: 50%;
+  margin-left: -250px;
+  margin-top: -250px;
+  @include transform-style(preserve-3d);
+}
+
+#bgs {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  @include transform(translateX(0) translateY(0) translateZ(-1000px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1));
+  @include transform-style(preserve-3d);
+  @include transition(All 0s 0s);
+
+  #bg2 {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include transition(All 0s 0s);
+    @include transform-style(preserve-3d);
+    @include bg-gradient(0deg, #395ecb 0%, #3657be 35%, #242161 75%, #1a0531 100%);
+  }
+}
+
+#stage {
+  position: absolute;
+  width: 900px;
+  height: 600px;
+  display: block;
+  left: 50%;
+  top: 50%;
+  margin-left: -450px;
+  margin-top: -300px;
+  @include transform-style(preserve-3d);
+  @include perspective(1000px);
+
+  #page2 {
+    position: absolute;
+    width: 900px;
+    height: 600px;
+    display: block;
+    left: 50%;
+    top: 50%;
+    margin-left: -450px;
+    margin-top: -300px;
+    @include transform-style(preserve-3d);
+
+    .grow {
+      position: absolute;
+      width: 1368px;
+      height: 1111px;
+      left: 50%;
+      top: 50%;
+      margin-left: -714px;
+      margin-top: -495.5px;
+      @include transform-style(preserve-3d);
+      @include transition(All 0.7s 0.6s);
+      @include transform(translateX(0) translateY(0) translateZ(100px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1));
+
+      img {
+        border: none;
+        @include transform-style(preserve-3d);
+      }
+    }
+    .glowlogo {
+      width: 200px;
+      height: 200px;
+      margin-top: 230px;
+      margin-left: 390px;
+      @include transition(All 1s 0.5s);
+      @include transform-style(preserve-3d);
+      @include transform(translateX(0) translateY(0) translateZ(200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1));
+    }
+
+    .main {
+      @include bg2-ul-li();
+      @include transition(All 1s 0s);
+      @include transform(translateX(30px) translateY(-20px) translateZ(200px) rotateX(75deg) rotateY(0deg) rotateZ(15deg) scaleX(1) scaleY(1) scaleZ(1));
+
+      ul {
+        @include bg2-ul-li();
+        @include transition(All 1s 0s);
+        @include animation(y 20s linear 0s infinite);
+
+        li {
+          @include bg2-ul-li();
+          border: 2px solid #5ec0ff;
+          @include border-radius(1000px);
+          @include transition(All 1.4s 0s);
+
+          span {
+            @include bg2-ul-li();
+            @include perspective(1000px);
+            @include animation(z 12s linear 0s infinite);
+
+            .round {
+              @include bg2-ul-li();
+            }
+          }
+
+          &:nth-of-type(1) {
+            @include transform(translateX(0) translateY(0) translateZ(0) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1));
+            .round {
+              @include animation(z 3s linear 0s infinite);
+            }
+          }
+          &:nth-of-type(2) {
+            @include transform(translateX(0) translateY(0) translateZ(0) rotateX(0deg) rotateY(60deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1));
+            .round {
+              @include animation(z 4s linear 0s infinite);
+            }
+          }
+          &:nth-of-type(3) {
+            @include transform(translateX(0) translateY(0) translateZ(0) rotateX(0deg) rotateY(-60deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1));
+            .round {
+              @include animation(z 5s linear 0s infinite);
+            }
+          }
+        }
+      }
+    }
+  }
+}

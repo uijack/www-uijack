@@ -11,6 +11,15 @@
   filter: alpha(opacity=$opacity * 100);
 }
 
+// 圆角
+@mixin border-radius ( $radius ) {
+  -webkit-border-radius: $radius;
+      -ms-border-radius: $radius;
+     -moz-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}
+
 // Box sizing
 @mixin box-sizing( $boxmodel) {
   -webkit-box-sizing: $boxmodel;
