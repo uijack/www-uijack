@@ -83,7 +83,8 @@
   .glow {
     width: 100%;
     height:100%;
-    margin-left: 450px;
+    margin-top: 120px;
+    margin-left: 300px;
     @include transform-style(preserve-3d);
     @include transition(All 1.6s 0s !important);
     @include transform(translateX(0) translateY(0) translateZ(0) rotateX(0deg) rotateY(-50deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1));
@@ -126,7 +127,7 @@
         @include transition(All 0.8s 0s);
 
         &:nth-of-type(1) {
-          @include transform(translateX(0) translateY(0) translateZ(0) rotateX(0deg) rotateY(50deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1));
+          @include transform(translateX(-120px) translateY(0) translateZ(0) rotateX(0deg) rotateY(50deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1));
 
           img {
             position: absolute;
@@ -140,7 +141,7 @@
           }
         }
         &:nth-of-type(2) {
-          @include transform(translateX(120px) translateY(0) translateZ(0) rotateX(0deg) rotateY(50deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1));
+          @include transform(translateX(0px) translateY(0) translateZ(0) rotateX(0deg) rotateY(50deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1));
 
           img {
             position: absolute;
@@ -154,7 +155,7 @@
           }
         }
         &:nth-of-type(3) {
-          @include transform(translateX(270px) translateY(0) translateZ(0) rotateX(0deg) rotateY(50deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1));
+          @include transform(translateX(120px) translateY(0) translateZ(0) rotateX(0deg) rotateY(50deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1));
 
           img {
             position: absolute;
@@ -168,7 +169,7 @@
           }
         }
         &:nth-of-type(4) {
-          @include transform(translateX(480px) translateY(0) translateZ(0) rotateX(0deg) rotateY(50deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1));
+          @include transform(translateX(270px) translateY(0) translateZ(0) rotateX(0deg) rotateY(50deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1));
 
           img {
             position: absolute;
@@ -208,7 +209,7 @@
       margin-top: -61.5px;
       @include transform-style(preserve-3d);
       @include transition(All 0.8s 0s);
-      @include transform(translateX(1300px) translateY(0) translateZ(30px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1));
+      @include transform(translateX(1300px) translateY(0) translateZ(0) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1));
     }
   }
 }
