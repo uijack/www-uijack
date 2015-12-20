@@ -16,4 +16,8 @@ app.config(function ( $locationProvider ) {
 app.run(function ( $rootScope, $state, $stateParams ) {
   $rootScope.$state = $state;
   $rootScope.$stateParams = $stateParams;
+  $(window).resize(function() {
+    console.log('1111');
+    $('body').css('width',$(window).width()+'px').css('height',$(window).height()+'px').css('overflow','hidden');
+  });
 });

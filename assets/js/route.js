@@ -2,7 +2,7 @@
 
 angular.module('uijack')
     .config(function ( $stateProvider, $urlRouterProvider ) {
-        $urlRouterProvider.when('', '/index');
+        $urlRouterProvider.when('', '/index0');
 
         $stateProvider
             .state('home', {
@@ -10,8 +10,12 @@ angular.module('uijack')
                 templateUrl: 'templates/navigate.tpl.html',
                 controller: 'IndexCtrl'
             })
-            .state('home.index', {
-                url: '/index',
+            .state('home.index0', {
+                url: '/index0',
+                templateUrl: 'templates/page0.tpl.html'
+            })
+            .state('home.index1', {
+                url: '/index1',
                 templateUrl: 'templates/page1.tpl.html'
             })
             .state('home.index2', {
@@ -24,6 +28,6 @@ angular.module('uijack')
             })
         ;
 
-        $urlRouterProvider.otherwise('/index');
+        $urlRouterProvider.otherwise('/index0');
     }
 );

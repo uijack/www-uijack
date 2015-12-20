@@ -9,7 +9,7 @@
   @include transform-style(preserve-3d);
 }
 
-#bgs {
+#bg2 {
   display: block;
   position: absolute;
   top: 0;
@@ -20,7 +20,7 @@
   @include transform-style(preserve-3d);
   @include transition(All 0s 0s);
 
-  #bg2 {
+  #bgg2 {
     width: 100%;
     height: 100%;
     display: block;
@@ -33,7 +33,7 @@
   }
 }
 
-#stage {
+#stage2 {
   position: absolute;
   width: 900px;
   height: 600px;

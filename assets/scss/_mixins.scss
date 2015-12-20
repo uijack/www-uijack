@@ -47,6 +47,10 @@
           transition: $transition;
 }
 
+@mixin backface-visibility( $backface ) {
+  -webkit-backface-visibility: $backface;
+          backface-visibility: $backface;
+}
 // 线性渐变
 @mixin bg-gradient( $deg, $c0, $c1, $c2, $c3 ) {
   background-image: -webkit-linear-gradient($deg, $c0, $c1, $c2, $c3);

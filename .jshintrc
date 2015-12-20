@@ -48,6 +48,6 @@
     "strict"        : false,
     "latedef"       : "nofunc",
     "predef": [
-        "angular", "window", "document"
+        "angular", "window", "document", "$"
     ]
 }
