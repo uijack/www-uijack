@@ -24,5 +24,8 @@
     <script src="js/route.js"></script>
     <script src="js/const.js"></script>
     <script src="js/controller/index-ctrl.js"></script>
+    <script type="text/javascript">
+        // javascript:var d=document.createElement("canvas");d.setAttribute("style","top:0;left:0;z-index:9999;position:fixed;pointer-events:none;");document.body.appendChild(d);var e=d.getContext("2d"),f=window.innerWidth,g=window.innerHeight;d.width=f;d.height=g;for(var h=[],d=0;70>d;d++)h.push({x:Math.random()*f,y:Math.random()*g,r:4*Math.random()+1,d:70*Math.random()});var k=0; setInterval(function(){e.clearRect(0,0,f,g);e.fillStyle="rgba(255, 255, 255,0.6)";e.shadowBlur=5;e.shadowColor="rgba(255, 255, 255, 0.9)";e.beginPath();for(var b=0;70>b;b++){var a=h[b];e.moveTo(a.x,a.y);e.arc(a.x,a.y,a.r,0,2*Math.PI,!0)}e.fill();k+=.01;for(b=0;70>b;b++)if(a=h[b],a.y+=Math.cos(k+a.d)+1+a.r/2,a.x+=2*Math.sin(k),a.x>f+5||-5>a.x||a.y>g)h[b]=0<b%3?{x:Math.random()*f,y:-10,r:a.r,d:a.d}:0<Math.sin(k)?{x:-5,y:Math.random()*g,r:a.r,d:a.d}:{x:f+5,y:Math.random()*g,r:a.r,d:a.d}},70);
+    </script>
 </body>
 </html>

@@ -3,9 +3,6 @@
 /**
  *  Navigate Classes
  */
-#home {
-  overflow-x: scroll;
-}
 
 #header {
   position: fixed;
@@ -14,8 +11,9 @@
   width: 100%;
   height: 50px;
   z-index: 1000;
-  background-color: #2a94f7;
-  @include box-shadow(inset 0 -2px 5px rgba(0,0,0,.1));
+  // background-color: #2a94f7;
+  background-color: rgba(34,34,34,.9);
+  @include box-shadow(inset 0 -2px 5px rgba(8,8,8,.1));
 
   .nav {
     min-width: 1200px;
@@ -29,13 +27,18 @@
 
         a {
           padding: 15px 20px;
-          width: 120px;
+          // width: 120px;
           height: 50px;
           line-height: 20px;
           display: block;
           text-align: center;
           font-size: 18px;
-          color: $light;
+          color: $tab-font-color;
+          background-color: #transparent;
+
+          &:hover {
+            color: $light;
+          }
         }
       }
     }

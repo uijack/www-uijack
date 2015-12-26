@@ -1,0 +1,170 @@
+@mixin system($width, $height) {
+  position: absolute;
+  width: $width;
+  height: $height;
+  left: 50%;
+  top: 50%;
+  margin-left: -$width / 2;
+  margin-top: -$height / 2;
+  display: block;
+  @include transform-style(preserve-3d);
+}
+
+#sun-system-bg {
+  position: absolute;
+  width: 100%;
+  min-width: 1200px;
+  height: 100%;
+  background-image: url('../images/sun-system-bg.jpg');
+  @include transform-style(preserve-3d);
+}
+
+#sun-system {
+  @include system(900px, 700px);
+  @include transform-style(preserve-3d);
+  @include perspective(1000px);
+
+  div,
+  ul,
+  li,
+  span,
+  img {
+    @include transform-style(preserve-3d);
+  }
+
+  #sun-system-wrap {
+    @include system(900px, 700px);
+
+    .main {
+      @include system(700px, 700px);
+      @include transition(All 1s 0s);
+      @include transform(translateX(30px) translateY(-20px) translateZ(200px) rotateX(70deg) rotateY(0deg) rotateZ(15deg) scaleX(1) scaleY(1) scaleZ(1));
+
+      ul {
+        @include system(700px, 700px);
+        @include transition(All 1s 0s);
+        // @include animation(y 20s linear 0s infinite);
+
+        li {
+          border: 2px solid #5ec0ff;
+          @include border-radius(1000px);
+          // @include transition(All 1.4s 0s);
+
+          span {
+            @include perspective(1000px);
+            // @include animation(z 12s linear 0s infinite);
+          }
+
+          &:nth-of-type(1) {
+            @include system(800px, 800px);
+
+            span {
+              @include system(800px, 800px);
+
+              .round {
+                @include system(800px, 800px);
+                @include animation(z 35s linear 0s infinite);
+              }
+            }
+          }
+          &:nth-of-type(2) {
+            @include system(650px, 650px);
+
+            span {
+              @include system(650px, 650px);
+
+              .round {
+                @include system(650px, 650px);
+                @include animation(z 25s linear 0s infinite);
+              }
+            }
+          }
+          &:nth-of-type(3) {
+            @include system(540px, 540px);
+
+            span {
+              @include system(540px, 540px);
+
+              .round {
+                @include system(540px, 540px);
+                @include animation(z 17s linear 0s infinite);
+              }
+            }
+          }
+          &:nth-of-type(4) {
+            @include system(460px, 460px);
+            
+            span {
+              @include system(460px, 460px);
+
+              .round {
+                @include system(460px, 460px);
+                @include animation(z 9s linear 0s infinite);
+              }
+            }
+          }
+          &:nth-of-type(5) {
+            @include system(390px, 390px);
+
+            span {
+              @include system(390px, 390px);
+
+              .round {
+                @include system(390px, 390px);
+                @include animation(z 7.5s linear 0s infinite);
+              }
+            }
+          }
+          &:nth-of-type(6) {
+            @include system(330px, 330px);
+
+            span {
+              @include system(330px, 330px);
+
+              .round {
+                @include system(330px, 330px);
+                @include animation(z 4s linear 0s infinite);
+              }
+            }
+          }
+          &:nth-of-type(7) {
+            @include system(200px, 200px);
+            @include transform(translateX(0px) translateY(0px) translateZ(0px) rotateX(360deg) rotateY(0deg) rotateZ(0deg) scaleX(1) scaleY(1) scaleZ(1));
+            span {
+              @include system(200px, 200px);
+
+              .round {
+                @include system(200px, 200px);
+                @include animation(z 2.46s linear 0s infinite);
+              }
+            }
+          }
+          &:nth-of-type(8) {
+            @include system(100px, 100px);
+
+            span {
+              @include system(100px, 100px);
+
+              .round {
+                @include system(100px, 100px);
+                @include animation(z .96s linear 0s infinite);
+              }
+            }
+          }
+          &:nth-of-type(9) {
+            @include system(20px, 20px);
+
+            span {
+              @include system(20px, 20px);
+              .round {
+                @include border-radius(50%);
+                @include system(20px, 20px);
+                @include animation(z 100s linear 0s infinite);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

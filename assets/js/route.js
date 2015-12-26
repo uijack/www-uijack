@@ -26,6 +26,10 @@ angular.module('uijack')
                 url: '/index3',
                 templateUrl: 'templates/page3.tpl.html'
             })
+            .state('home.sun-system', {
+                url: '/sun-system',
+                templateUrl: 'templates/sun-system.tpl.html'
+            })
         ;
 
         $urlRouterProvider.otherwise('/index0');
